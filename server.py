@@ -30,7 +30,7 @@ def stop_services():
 @app.route('/statusservice')
 def status_services():
     print 'Status'
-    result = os.system("/etc/init.d/volttron status")
+    result = os.system(". /home/pea/workspace/portal/status.sh")
     res = json.dumps({"status":200,"result":result})
     print res
     return res
