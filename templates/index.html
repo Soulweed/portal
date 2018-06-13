@@ -8,7 +8,7 @@
             //This performs a POST-Request.
             //Use "$.get();" in order to perform a GET-Request (you have to take a look in the rest-API-documentation, if you're unsure what you need)
             //The Browser downloads the webpage from the given url, and returns the data.
-            $.get( "http://127.0.0.1:5000/statusservice", function( data ) {
+            $.post( "http://192.168.1.101/statusservice", function( data ) {
                  //As soon as the browser finished downloading, this function is called.
                  $('#demo').html(data);
             });
@@ -18,7 +18,7 @@
             //This performs a POST-Request.
             //Use "$.get();" in order to perform a GET-Request (you have to take a look in the rest-API-documentation, if you're unsure what you need)
             //The Browser downloads the webpage from the given url, and returns the data.
-            $.get( "http://127.0.0.1:5000/startservice", function( data ) {
+            $.post( "http://192.168.1.101/startservice", function( data ) {
                  //As soon as the browser finished downloading, this function is called.
                  $('#demo').html(data);
             });
@@ -28,7 +28,7 @@
             //This performs a POST-Request.
             //Use "$.get();" in order to perform a GET-Request (you have to take a look in the rest-API-documentation, if you're unsure what you need)
             //The Browser downloads the webpage from the given url, and returns the data.
-            $.get( "http://127.0.0.1:5000/stopservice", function( data ) {
+            $.post( "http://192.168.1.101/stopservice", function( data ) {
                  //As soon as the browser finished downloading, this function is called.
                  $('#demo').html(data);
             });

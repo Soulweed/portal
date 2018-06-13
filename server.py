@@ -14,20 +14,20 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/startservice')
+@app.route('/startservice', methods=['POST'])
 def start_services():
-    os.system("/etc/init.d/volttron start")
+    os.system(". /home/pea/workspace/portal/start.sh")
     res = json.dumps({"status":200})
     return res
 
-@app.route('/stopservice')
+@app.route('/stopservice', methods=['POST'])
 def stop_services():
-    os.system("/etc/init.d/volttron stop")
+    os.system(". /home/pea/workspace/portal/stop.sh")
     res = json.dumps({"status":200})
     return res
 
 
-@app.route('/statusservice')
+@app.route('/statusservice', methods=['POST'])
 def status_services():
     print 'Status'
     result = os.system(". /home/pea/workspace/portal/status.sh")
